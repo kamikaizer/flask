@@ -1,0 +1,156 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+/* img {
+    width: 300px;
+    margin-left: 25px;
+}
+.btn-group {
+    margin-left: 800px;
+} */
+
+body {
+  background-color: #ffffff;
+  margin: 0px;
+  font-family: 'Muli', sans-serif;
+}
+.header {
+  align-items: center;
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 92%;
+}
+.header__img {
+  width: 200px;
+  margin-left: 40px;
+  width: 200px;
+}
+.header__menu {
+  margin-right: 60px;
+  margin-top: 10px;
+}
+.header__menu ul {
+  display: none; /*display none, para no mostrar contenido*/
+  list-style: none; /*list-style: none para quitar simbolos de lista*/
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul, ul:hover { /* hover ul para desplegar lista no visible por el displaynoe*/
+  display: block;
+}
+.header__menu li {
+  margin: 10px 0px;
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+.header__menu li a:hover { /* a:hover va junto osino no realiza modificacion */
+  text-decoration: underline;
+}
+.header__menu--profile{
+  display: flex;
+  margin-left: 2px;
+  width: 40px;
+}
+.header__menu--profile p {
+  margin: 0px;
+  color: white;
+  margin-top: 15px;
+  margin-left: 3px;
+  align-items: center;
+}
+.header__menu--profile {
+  margin-right: 8px;
+  width: 40px;
+}
+.main {
+  height: 300px;
+}
+.main__title {
+  color: rgb(255, 0, 0);
+  font-size: 25px
+}
+.Categories__titte {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100px;
+}
+.input {
+  font-family: 'Muli', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);/*opasidad del item (barra de busqueda en este caso)*/
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 70%;
+  outline: none; /*elimina los margenes al seleccionar la barra de busqueda*/
+}
+::placeholder { /*agregarle color al texto dentro de la barra de buscador*/
+  color: white;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #f1ebeb;
+}
+.footer a{
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+@media only screen and (max-width: 500px) {
+  .header__menu {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 300px;
+  }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+</style>
+    
+<body>
+    <header class="header">
+        <a href=""><img class="header__img" src="http://schulich.yorku.ca/wp-content/uploads/2015/03/Scotiabank-Logo-PNG-03791-1.png" alt="Logo"></a>
+        <div class="header__menu">
+          <div class="header__menu--profile">
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">Nombre Usuario</button>
+                <button type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;"><g transform="translate(25.8,25.8) scale(0.7,0.7)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none"></path><g fill="#ffffff" stroke="none"><path d="M26.875,16.125v139.75h96.75v-31.24219l-5.87891,-5.71094l-4.53516,-4.70312h-0.33594v30.90625h-75.25v-118.25h75.25v31.24219l4.87109,-5.03906l5.87891,-5.71094v-31.24219zM125.47266,60.63672l-7.72656,7.72656l12.26172,12.26172h-65.50781v10.75h65.50781l-12.26172,12.26172l7.72656,7.72656l21.5,-21.5l3.69531,-3.86328l-3.69531,-3.86328z"></path></g></g></g></svg></button>
+            </div>
+        </div>
+      </header>
+
+
+    <div class="main">
+        <div class="main__title">
+            <h1>Lista de Categorias</h1>
+        </div>
+    </div>
+</body>
