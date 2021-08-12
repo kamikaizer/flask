@@ -195,6 +195,7 @@
 }
 .card {
 	border-radius: 0%;
+	width: 150%;
 }
 </style>
 <body>
@@ -213,7 +214,11 @@
         <img class="header__img" src="http://schulich.yorku.ca/wp-content/uploads/2015/03/Scotiabank-Logo-PNG-03791-1.png" alt="Logo">
       </div>
       <div class="right_menu">
+		<div class="btn-group" role="group" aria-label="Basic outlined example">
+			<button type="button" class="btn btn-light">Nombre Usuario</button>
+
 		<button type="button" class="btn btn-light"><img src="https://img.icons8.com/windows/32/000000/exit.png"/></button>
+	</div>
 
       </div>
     </div>
@@ -232,26 +237,26 @@
               </li>
               <li>
                 <a href="#">
-                  <span class="icon"><i class="fab fa-delicious"></i></span>
-                  <span class="title">Aplicaciones</span>
+                  <span class="icon"><i class="fa fa-book fa"></i></span>
+                  <span class="title">menu 1</span>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <span class="icon"><i class="fab fa-elementor"></i></span>
-                  <span class="title">Informes</span>
+                  <span class="icon"><i class="fa fa-book fa"></i></span>
+                  <span class="title">menu 2</span>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                  <span class="title">Consulta DB</span>
+                  <span class="icon"><i class="fa fa-book fa"></i></span>
+                  <span class="title">menu3</span>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <span class="icon"><i class="fas fa-border-all"></i></span>
-                  <span class="title">Control</span>
+                  <span class="icon"><i class="fa fa-book fa"></i></span>
+                  <span class="title">menu4</span>
                 </a>
               </li>
             </ul>
@@ -262,11 +267,19 @@
 
 			<button type="button" class="btn btn-secondary btn-lg">Ingresar caso</button>
 			<button type="button" class="btn btn-secondary btn-lg">Editar Caso</button>
-			<button type="button" class="btn btn-secondary btn-lg">Aplicaciones</button>
+			<button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				  Aplicaciones
+				</button>
+			  </p>
+			  <div class="collapse" id="collapseExample">
+				<div class="card card-body">
+				  Lista de aplicaciones
+				</div>
+			  </div>
 <br><br>
 			<div class="card">
 				<div class="card-body">
-				  This is some text within a card body.
+				  aqui va el crud
 				</div>
 			  </div>
 	    </div>
