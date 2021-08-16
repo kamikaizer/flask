@@ -6,14 +6,18 @@ app = Flask(__name__)
 def login():
     return render_template("login.html")
 
-@app.route("/home")
-def home():
-    return render_template("index.html")
-
-
 @app.route("/home1")
 def home1():
-    return render_template("index1.html")
+    return render_template("home1.html")
+
+
+@app.route("/form")
+def form():
+    return render_template("form.html")
+
+@app.route("/crud")
+def crud():
+    return render_template("crud.html")
 
 
 if __name__ == "__main__":
