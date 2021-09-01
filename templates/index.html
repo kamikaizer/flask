@@ -1,180 +1,202 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-body {
-  background-color: #ffffff;
-  margin: 0px;
-  font-family: 'Muli', sans-serif;
-}
-.header {
-  align-items: center;
-  background-color: #ffffff;
-  color: white;
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
-  top: 0px;
-  width: 92%;
-}
-.header__img {
-  width: 200px;
-  margin-left: 40px;
-  width: 200px;
-}
-.header__menu {
-  margin-right: 60px;
-  margin-top: 10px;
-}
-.header__menu ul {
-  display: none; /*display none, para no mostrar contenido*/
-  list-style: none; /*list-style: none para quitar simbolos de lista*/
-  padding: 0px;
-  position: absolute;
-  width: 100px;
-  text-align: right;
-  margin: 0px 0px 0px -14px;
-}
-.header__menu:hover ul, ul:hover { /* hover ul para desplegar lista no visible por el displaynoe*/
-  display: block;
-}
-.header__menu li {
-  margin: 10px 0px;
-}
-.header__menu li a {
-  color: white;
-  text-decoration: none;
-}
-.header__menu li a:hover { /* a:hover va junto osino no realiza modificacion */
-  text-decoration: underline;
-}
+	<title>Portal</title>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 
-.header__menu--profile {
-  margin-right: 8px;
-  width: 40px;
-}
-.main {
-  height: 785px;
-  margin-left: 40px;
-}
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
-.Categories__titte {
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  padding-left: 30px;
-  width: 100px;
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  background-color: #f1ebeb;
-}
-.footer a{
-  color: rgb(17, 1, 1);
-  font-size: 22px;
-  cursor: pointer;
-  padding-left: 30px;
-  text-decoration: none;
-}
-.footer a:hover{
-  text-decoration: underline;
-}
-@media only screen and (max-width: 500px) {
-  .header__menu {
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    width: 300px;
-  }
-  .footer {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-.carousel-inner{
-  margin-top: 20px;
-  margin-left: -20px;
-  margin-bottom: 20px;
-  height: 90%;
-  width: 100%;
-}
-.btn-secondary {
-	border-radius: 0%;
-}
-.btn-danger {
-  border-radius: 0%;
-}
-.btn-outline-primary{
-  border-radius: 0%;
-}
-
-</style>
-    
 <body>
-    <header class="header">
-        <a href=""><img class="header__img" src="http://schulich.yorku.ca/wp-content/uploads/2015/03/Scotiabank-Logo-PNG-03791-1.png" alt="Logo"></a>
-        <div class="header__menu">
-          <div class="header__menu--profile">
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-light">Nombre Usuario</button>
-                <button type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;"><g transform="translate(25.8,25.8) scale(0.7,0.7)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none"></path><g fill="#ffffff" stroke="none"><path d="M26.875,16.125v139.75h96.75v-31.24219l-5.87891,-5.71094l-4.53516,-4.70312h-0.33594v30.90625h-75.25v-118.25h75.25v31.24219l4.87109,-5.03906l5.87891,-5.71094v-31.24219zM125.47266,60.63672l-7.72656,7.72656l12.26172,12.26172h-65.50781v10.75h65.50781l-12.26172,12.26172l7.72656,7.72656l21.5,-21.5l3.69531,-3.86328l-3.69531,-3.86328z"></path></g></g></g></svg></button>
-            </div>
-        </div>
-      </header>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="index.html">
+          <span class="align-middle">Menu</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="home">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Inicio</span>
+            </a>
+					</li>
+
+					
+
+					
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="form">
+              <i class="align-middle" data-feather="book"></i> <span class="align-middle">Ingreso de Casos</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Gestión
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="crud">
+              <i class="align-middle" data-feather="edit-3"></i> <span class="align-middle">Edicion</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="file"></i> <span class="align-middle">Informes</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="database"></i> <span class="align-middle">Consultas DB</span>
+            </a>
+					</li>
+ 
+				<!--	<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-typography.html">
+              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="icons-feather.html">
+              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
+            </a>
+					</li> -->
 
 
-    <div class="main">
-
-      <button type="button" class="btn btn-secondary btn-lg">Ingresar caso</button>
-
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Analisis <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          </ul>
-        </div>
-        <button type="button" class="btn btn-secondary btn-lg">Aplicaciones</button>
-        <button type="button" class="btn btn-secondary btn-lg">Consultas DB</button>
-        <button type="button" class="btn btn-secondary btn-lg">Control</button>
-
-      </div>
+<!-- 
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="maps-google.html">
+              <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+            </a>
+					</li> -->
 
 
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://imgix.bustle.com/inverse/bc/0c/32/b2/c2b4/4858/8046/ea39ddab45c5/best-simpsons-episodes-on-disney-plus-memes-steamed-hams-stupid-sexy-flanders.png?w=2000&h=640&auto=format&q=70&fit=crop&crop=faces" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_940,w_1410/c_fill,w_1500,h_1000/q_auto,f_auto/redbullcom/2019/07/17/44f55f2f-a5f9-44d0-9c62-31672feca5a2/hay-tabla" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://www.laguiadelvaron.com/wp-content/uploads/2017/05/static.vix_.com-monos-burns.gif" class="d-block w-100" alt="...">
-          </div>
-        </div>
-      </div>
+					<li class="sidebar-header">
+						Control
+					</li>
 
-    </div>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Politicas</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="git-commit"></i> <span class="align-middle">procedimientos</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="list"></i> <span class="align-middle">Organigrama</span>
+            </a>
+					</li>
 
 
-    
-    <footer>
-      <div class="footer">
-        <a>Desarrollado por el Area de Servicios Forenses Digital</a>
-        <a href=" ">Politicas y procedimientos</a>
-        <a href=" ">Organigrama</a>
-    </footer>
+					<li class="sidebar-header">
+						Historico
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="save"></i> <span class="align-middle">2020</span>
+            </a>
+					</li>
+				</ul>
+
+
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
+				<img class="header__img" height="65px" src="http://schulich.yorku.ca/wp-content/uploads/2015/03/Scotiabank-Logo-PNG-03791-1.png" alt="Logo">
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+
+
+
+			  <div class="btn-group" role="group" aria-label="Basic outlined example">
+				<button type="button" class="btn btn-light">Nombre Usuario</button>
+	
+			<button type="button" class="btn btn-light"><img src="https://img.icons8.com/windows/32/000000/exit.png"/></button>
+		</div>
+					
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="row">
+					<div class="col-sm-12">
+					  <div class="card">
+						<div class="card-body">
+							<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-inner"style="height: 680px;">
+								  <div class="carousel-item active" >
+									<img src="https://media.winnipegfreepress.com/images/1020*1020/NEP1722981.jpg" class="d-block w-100" alt="...">
+								  </div>
+								  <div class="carousel-item">
+									<img src="https://www.vmcdn.ca/f/files/glaciermedia/import/lmp-all/955725-b-wh-in-man-sask-scotibank-sask.jpg" class="d-block w-100" alt="...">
+								  </div>
+								  <div class="carousel-item">
+									<img src="https://i.cbc.ca/1.2109039.1440772394!/httpImage/image.jpg_gen/derivatives/16x9_780/tp-scotia.jpg" class="d-block w-100" alt="...">
+								  </div>
+								</div>
+							  </div>
+						</div>
+					  </div>
+					  
+					</div>
+					
+				  </div>
+			</main>
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="#" target="_blank"><strong>Desarrollado por Servicios Forenses Digital 2021</strong></a>
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#" target="_blank">Contacto</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#" target="_blank">Politicas</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#" target="_blank">Procedimientos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
 </body>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</html>
